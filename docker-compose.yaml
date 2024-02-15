@@ -6,6 +6,8 @@ services:
       - "5000:5000"
     environment:
       - CURRENT_ENVIRONMENT=development
+    volumes:
+      - back-end-data:/app/logs  # Mount a named volume to persist data
 
   front-end-service:
     image: frontend:1.0
@@ -13,3 +15,6 @@ services:
       - "8080:8080"
     environment:
       - CURRENT_ENVIRONMENT=development
+
+volumes:
+  back-end-data:
