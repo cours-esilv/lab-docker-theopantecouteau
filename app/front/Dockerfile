@@ -14,7 +14,6 @@ RUN chmod +x /entrypoint.sh
 
 # Set the environment variable
 ENV WS_BACK_URL=http://localhost:5000
-
 # Use the custom entrypoint script
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
